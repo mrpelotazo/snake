@@ -1,5 +1,5 @@
 """
-Name        : snakegame.py
+Name        : game.py
 Description : Python version of the snake game.
 Author      : Adrian Antonana
 Date        : 29.07.2012
