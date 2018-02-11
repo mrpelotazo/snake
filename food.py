@@ -18,6 +18,7 @@ BLOCK_SIZE_INNER = 20
 class Food:
     """Food class definition"""
 
+    # pylint: disable=too-many-arguments
     def __init__(self, surface, minx, maxx, miny, maxy):
         """Class constructor"""
         self.surface = surface

@@ -20,6 +20,7 @@ BLOCK_SIZE = 30
 BLOCK_SIZE_INNER = 20
 
 
+# pylint: disable=too-many-instance-attributes
 class Snake:
     """Snake class definition"""
 
@@ -60,6 +61,16 @@ class Snake:
     def get_head_pos(self):
         """Get snake's head position"""
         return self.pos_list[0]
+
+    def outside_limits(self, width, height):
+        """Check if the snake's head is outside the limits"""
+        headpos = self.get_head_pos()
+        is_outside = (
+            headpos[0] < 1 or
+            headpos[1] < 1 or
+            headpos[0] >= height + 1 or
+            headpos[1] >= width + 1)
+        return is_outside
 
     def move(self):
         """Update the positions list and check if the snake has crashed"""
