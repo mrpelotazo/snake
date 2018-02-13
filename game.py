@@ -67,7 +67,7 @@ class Game:
         self.screen.fill(BLACK)
 
         # we need a snake and something to eat
-        self.snake = Snake(self.screen, int(WIDTH / 2), int(HEIGHT / 2))
+        self.snake = Snake(self.screen, WIDTH // 2, HEIGHT // 2)
         self.food = Food(self.screen, 1, HEIGHT + 1, 1, WIDTH + 1)
 
         # food should not appear where the snake is
